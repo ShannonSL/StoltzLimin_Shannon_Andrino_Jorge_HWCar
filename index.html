@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Auto App</title>
+    <link rel="stylesheet" href="css/main.css" />
+        <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+      integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <main id="app">
+
+        <!-- TEST CONNECTION WITH DATABASE TO FETCH AUTO VIDEO -->
+      <h1>{{ welcomeMsg }}</h1>
+      <h2>{{ autodata[0].auto_make }}</h2>
+      <h3>{{ autodata[0].auto_model }}</h3>
+      <video :src="`video/${autodata[0].auto_video}`" autoplay loop></video>
+      <!-- end TEST CONNECTION WITH DATABASE TO FETCH AUTO VIDEO -->
+      
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
